@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{pageTitle}
+        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/main.css")
+        link(rel="stylesheet" href="/css/product.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,700")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:900")
+        script(src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js")
+        script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+        block styles
+    body
+        header.main-header
+            nav.main-header__nav
+                ul.main-header__item-list
+                    li.main-header__item
+                        a(href="/", class=(path === '/' ? 'active': '')) SHOP
+                    li.main-header__item
+                        //- tester le path que et declarer dans la page app.js //
+                        a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) PRODUCT
+        block content
