@@ -9,6 +9,8 @@ const rootDir = require('../util/path');
 router.get('/add-product',productControllers.getAddProduct);
 // meme route car =====> POST
 router.post('/add-product',productControllers.postAddProduct);
+//  /admin/products =>Get
+router.get('/products')
 
 /*
 exports.routes = router;
