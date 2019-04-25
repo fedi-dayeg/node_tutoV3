@@ -26,7 +26,7 @@ exports.getIndex = (req, res, next) => {
             path: '/'
         });
     });
-}
+};
 
 exports.getCart = (req, res, next) =>{
 

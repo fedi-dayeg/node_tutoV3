@@ -12,13 +12,17 @@ exports.postAddProduct = (req, res, next)=> {
     console.log(req.body);
     //remplacer dans le models
     //product.push({title: req.body.title});
-    const product = new Product(req.body.title);
+    const title = req.body.title;
+    const imageUrl = req.body.imageUrl;
+    const price= req.body.price;
+    const description = req.body.description;
+    const product = new Product(title,imageUrl,description,price);
     product.save();
     res.redirect('/');
 };
 
 exports.getProducts = (req, res, next)=>{
-    product.fetchAll(product =>{
-    res.render('/admin/products',{ prods:product,pageTitle:'Products', path:'/admin/products'});
+    Product .fetchAll(products =>{
+    res.render('admin/products',{ prods:products,pageTitle:'Products', path:'/admin/products'});
     });
 };
