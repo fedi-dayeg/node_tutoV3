@@ -4,7 +4,7 @@ const Product = require('../models/product');
 
 exports.getProducts= (req, res, next) =>{
    Product.fetchAll((products)=>{
-       res.render('shop/product-list',{prods: products,pageTitle: 'All products', path: '/products'
+       res.render('shop/product-list',{prods: products, pageTitle: 'All products', path: '/products'
        });
    });
     console.log('in other midlware');
@@ -18,20 +18,21 @@ exports.getProducts= (req, res, next) =>{
     //const product = adminData.product;
     //res.render('shop',{prods: product,pageTitle: 'Shop', path: '/', hasProducts: product.length >0, activeShop: true, productCSS:true, layout: false });
 };
-exports.getIndex= (req, res, next) => {
-    Product.fetchAll((products)=> {
+exports.getIndex = (req, res, next) => {
+    Product.fetchAll(products => {
         res.render('shop/index', {
-            prods: products, pageTitle: 'shop', path: '/'
+            prods: products,
+            pageTitle: 'Shop',
+            path: '/'
         });
     });
-};
+}
 
 exports.getCart = (req, res, next) =>{
-    product.fetchAll((product)=>{
+
         res.render('shop/cart',{pageTitle: 'Your Cart', path: '/cart'})
-    });
 };
 
 exports.getChekout = (req,res,next) =>{
-    res.render('chop/chekout', {pageTitle: 'Chekout',path:'/chekout'})
+    res.render('Shop/checkout', {pageTitle: 'checkout',path:'/checkout'})
 };
