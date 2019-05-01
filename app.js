@@ -7,9 +7,16 @@ const  adminRoutes = require('./Routes/admin');
 const  shopRouter = require('./Routes/shop');
 const path = require('path');
 const errorController = require('./controllers/error');
+const db = require('./util/database');
 //importer handlebars
 //const expressHbs = require('express-handlebars');
 
+
+/*db.execute('SELECT * FROM products').then(result =>{
+    console.log(result);
+}).catch(err => {
+    console.log(err)
+});*/
 
 //ajouter un engine pour handlebars
 //en peut changer le nom handlebars tout se que en veut mais il faut aussi changer le format de extension html
